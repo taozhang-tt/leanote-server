@@ -343,7 +343,7 @@ define('editor_drop_paste', ['fileupload'], function() {
 	            if (data.result.Ok == true) {
 		    		// 这里, 如果图片宽度过大, 这里设置成500px
 		    		var re = data.result;
-					var src = "/api/file/getImage?fileId=" + re.Id;
+					var src = UrlPrefix + "/api/file/getImage?fileId=" + re.Id;
 
 					if(curNote && !curNote.IsMarkdown) {
 						data.process.replace(src);
